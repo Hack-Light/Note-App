@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note App</title>
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/jquery.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form method="POST" action="/new">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Title</label>
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="Title"
+              name="title"
+              id="title"
+              required
+              data-validation-required-message="Please enter a title."
+            />
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Note</label>
+            <textarea
+              rows="10"
+              class="form-control"
+              name="body"
+              id="body"
+              required
+              data-validation-required-message="No Notes Entered"
+            ></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+
+          <a href="/admin" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary">
+            Post
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
